@@ -1,0 +1,30 @@
+*{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body{
+    margin: 0;
+}
+
+#top-bar{
+    background-color: #0278d2;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#title-container{
+    /* display: flex; */
+    width: fit-content;
+    p{
+        color: white;
+        font-size: 1.5em;
+        margin: 16px 0px;
+    }
+}
+
+#nav-container{
+    /* display: flex; */
+    margin: auto;
+    width: fit-content;
+}
