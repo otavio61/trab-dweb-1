@@ -31,6 +31,14 @@ body{
         display: flex;
         gap: 4vw;
         padding-right: 199.547px;
+
+        ul{
+            li{
+                display: inline;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
     }
 
     a{
