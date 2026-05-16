@@ -14,7 +14,7 @@ body{
 }
 
 #title-container{
-    /* display: flex; */
+
     width: fit-content;
     p{
         color: white;
@@ -24,7 +24,18 @@ body{
 }
 
 #nav-container{
-    /* display: flex; */
     margin: auto;
     width: fit-content;
+
+    nav{
+        display: flex;
+        gap: 4vw;
+        padding-right: 199.547px;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
 }
