@@ -21,9 +21,9 @@ themeButton.addEventListener('click', () => {
 
 })
 
-function setCookie(theme){
+function setCookie(data){
     if(navigator.cookieEnabled)
-        document.cookie = theme
+        document.cookie = data
 }
 
 function setTheme(){

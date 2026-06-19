@@ -1,53 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="icons/tech.png" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" href="icons/tech.png">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>Curso de ADS</title>
 </head>
-    <body>
-        <header>
-            <div class="top-bar">
-                <div class="title-container">
-                    <strong><p class="title">Curso de ADS</p></strong>
-                </div>
-                
-                <div class="nav-container">
-                    <nav>
-                        <ul>
-                            <li><a href="#">Página inicial</a></li>
-                            <li><a href="#">Grade currícular</a></li>
-                            <li><a href="#">Comparação com outros cursos</a></li>
-                        </ul>
-                    </nav>
-                </div>
 
-                <div class="accessible-container">
-                    <button id="theme-button">
-                        <img id="theme-icon" src="./icons/sun.png" alt="Alterar tema da página" title="Alterar tema da página" height="20px">
-                    </button>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="title-container">
+                <strong>
+                    <p class="title">Curso de ADS</p>
+                </strong>
+            </div>
+
+            <div class="nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="./">Sobre</a></li>
+                        <li><a href="#">Grade currícular</a></li>
+                        <li><a href="#">Comparação de cursos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="accessible-container">
+                <button id="theme-button">
+                    <img id="theme-icon" src="./icons/sun.png" alt="Alterar tema da página"
+                        title="Alterar tema da página" height="20px">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="section-container">
+                <div class="content-container">
+
+                    <h1>Um pouco de contexto</h1>
+
+                    <div class="text-container">
+                        <p>Os primeiros cursos superiores na área de computação no Brasil são da
+                            década de 1970, em decorrência da consolidação da informática brasileira.
+                            Desde este período, o número de cursos tem aumentado rapidamente devido
+                            às possibilidades de emprego, boa remuneração e pelas oportunidades
+                            favoráveis ao empreendedorismo, mesmo em períodos de crise econômica do
+                            país.
+                        </p>
+
+                        <p>
+                            O relatório Mapa do Ensino Superior 2020 (SEMESP, 2020) corrobora com a
+                            informação, descrevendo ser crescente a demanda no mercado por profissionais
+                            especializados na área de Tecnologia da Informação (TI), porém as ofertas de
+                            cursos nessa área ainda não são suficientes.
+                        </p>
+                    </div>
+
+                    <canvas id="graficoIngresso" aria-label="Gráfico ingresso em cursos de graduação"></canvas>
+
+                    <div class="description">
+                        <h3>Figura 1. Número de ingressos em cursos de graduação por grau acadêmico - 2010 a 2020</h3>
+                        <div class="font-bold">Fonte: [INEP, 2020]</div>
+                    </div>
+
+                    <div class="text-container">
+                        <p>A pandemia vivenciada em 2019 fez com que houvesse uma
+                            adaptação das empresas para o trabalho remoto, dessa forma, as empresas
+                            investiram em TI e a estrutura criada na época continua em uso. Durante esse
+                            período também houve crescimento do uso de dispositivos móveis. Dessa
+                            forma, a demanda por profissionais de TI capacitados continua crescente.
+                        </p>
+
+                        <p>
+                            O relatório Mapa do Ensino Superior 2020 (SEMESP, 2020) corrobora com a
+                            informação, descrevendo ser crescente a demanda no mercado por profissionais
+                            especializados na área de Tecnologia da Informação (TI), porém as ofertas de
+                            cursos nessa área ainda não são suficientes.
+                        </p>
+                    </div>
+
                 </div>
             </div>
-        </header>
 
-        <main>
-            <section>
-                <div class = 'sessoes'>
-                    Texto Teste1
-                </div>
+            <!-- <div class='section-container'>
+                Texto Teste2
+            </div>
 
-                <div class = 'sessoes'>
-                    Texto Teste2
-                </div>
+            <div class='section-container'>
+                Texto Teste3
+            </div> -->
+        </section>
+    </main>
 
-                <div class = 'sessoes'>
-                    Texto Teste3
-                </div>
-            </section>
-        </main>
+    <script src="js/main.js"></script>
+    <script src="js/chart.js"></script>
+</body>
 
-        <script src="js/main.js"></script>
-    </body>
 </html>
