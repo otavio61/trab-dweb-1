@@ -40,3 +40,31 @@ function setThemeIcon(icon){
         img.src = './icons/sun.png'
         
 }
+
+//----------------------------------------//
+
+const increaseB = document.getElementById("increase-button");
+const decreaseB = document.getElementById("decrease-button");
+const em1 = 16
+
+increaseB.addEventListener('click', () => {
+    const p = document.getElementsByTagName("p")
+    
+    for (let i = 1; i < p.length - 1; i++) {
+        let size = parseFloat(window.getComputedStyle(p[i], null).fontSize)
+        p[i].style.fontSize = `${(size / em1) + 0.1}em`
+
+        
+    }
+     
+})
+
+decreaseB.addEventListener('click', () => {
+    const p = document.getElementsByTagName("p")
+
+    for (let i = 1; i < p.length - 1; i++) {
+        let size = parseFloat(window.getComputedStyle(p[i], null).fontSize)
+        p[i].style.fontSize = `${(size / em1) - 0.1}em`
+    }
+     
+})
