@@ -27,9 +27,12 @@ function setCookie(data){
 }
 
 function setTheme(){
-    if (navigator.cookieEnabled && document.cookie !== ''){
-        document.body.classList.toggle(document.cookie.split('=')[1])
-        setThemeIcon(document.cookie.split('=')[1])
+    if (navigator.cookieEnabled && document.cookie.includes('tema')){
+
+        let theme = document.cookie.split(';')[0].split('=')[1]
+
+        document.body.classList.toggle(theme)
+        setThemeIcon(theme)
     }
 }
 
@@ -47,24 +50,52 @@ const increaseB = document.getElementById("increase-button");
 const decreaseB = document.getElementById("decrease-button");
 const em1 = 16
 
+// window.addEventListener('load', setFontSize)
+
 increaseB.addEventListener('click', () => {
     const p = document.getElementsByTagName("p")
-    
-    for (let i = 1; i < p.length - 1; i++) {
-        let size = parseFloat(window.getComputedStyle(p[i], null).fontSize)
-        p[i].style.fontSize = `${(size / em1) + 0.1}em`
+    let size
 
-        
+    for (let i = 1; i < p.length - 1; i++) {
+        size = parseFloat(window.getComputedStyle(p[i]).fontSize)
+        p[i].style.fontSize = `${size + 1.6}px`
     }
-     
+    console.log(parseFloat(window.getComputedStyle(p[1]).fontSize));
+    
+    setCookie(`fonte=${parseFloat(window.getComputedStyle(p[1]).fontSize)}; age=86400; path=/`)
 })
 
 decreaseB.addEventListener('click', () => {
     const p = document.getElementsByTagName("p")
+    let size
 
     for (let i = 1; i < p.length - 1; i++) {
-        let size = parseFloat(window.getComputedStyle(p[i], null).fontSize)
-        p[i].style.fontSize = `${(size / em1) - 0.1}em`
+        size = parseFloat(window.getComputedStyle(p[i]).fontSize)
+        p[i].style.fontSize = `${size - 1.6}px`
     }
-     
+    console.log(parseFloat(window.getComputedStyle(p[1]).fontSize));
+    
+    setCookie(`fonte=${parseFloat(window.getComputedStyle(p[1]).fontSize)}; age=86400; path=/`)
 })
+
+function setFontSize(){
+    if (navigator.cookieEnabled && document.cookie.includes('fonte')){
+
+        const p = document.getElementsByTagName("p")
+        let fontSize = document.cookie.split(';')[1].split('=')[1]
+
+        for (let i = 1; i < p.length - 1; i++) {
+            p[i].style.fontSize = `${fontSize}px`
+        }
+    }
+}
+
+/**
+ *  for(let i = 0; i < c.length; i++){
+        if(c[i].includes('fonte')){
+            console.log(i)
+        }
+        
+    }
+
+ */
