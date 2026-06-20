@@ -20,6 +20,10 @@ body{
     .tabela-curricular tr:nth-child(even){
         background-color: var(--dark-gray);  
     }
+
+    .tabela-curricular th{
+        background-color: var(--dark);
+    }
 }
 
 .light-theme{
@@ -28,6 +32,14 @@ body{
 
     .top-bar, .footer-container{
         background-color: var(--blue);
+    }
+
+    .tabela-curricular tr:nth-child(even){
+        background-color: var(--light-gray);   
+    }
+
+    .tabela-curricular th{
+        background-color: var(--green);
     }
 }
 
@@ -87,7 +99,6 @@ body{
 
 .icon{
     filter: invert(100%);
-
 }
 
 .section-container {
