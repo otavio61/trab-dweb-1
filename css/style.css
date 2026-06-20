@@ -17,7 +17,7 @@ body{
         background-color: var(--dark-footer-header);
     }
 
-    .tabela-curricular tr:nth-child(even){
+    .tabela-curricular tr:nth-child(odd){
         background-color: var(--dark-gray);  
     }
 
@@ -34,7 +34,7 @@ body{
         background-color: var(--blue);
     }
 
-    .tabela-curricular tr:nth-child(even){
+    .tabela-curricular tr:nth-child(odd){
         background-color: var(--light-gray);   
     }
 
@@ -154,7 +154,7 @@ body{
     border-collapse: collapse;
     width: 100%;
     
-    tr:nth-child(even){
+    tr:nth-child(odd){
       background-color: var(--light-gray);  
     }
 
