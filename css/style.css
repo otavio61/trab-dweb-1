@@ -5,9 +5,6 @@
     font-family: Arial, Helvetica, sans-serif
 }
 
-body{
-    margin: 0;
-}
 
 .dark-theme{
     background-color: rgb(32, 32, 32);
@@ -104,7 +101,7 @@ body{
 .section-container {
     margin: 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .description {
@@ -174,11 +171,35 @@ body{
 }
 
 #graficoIngresso{
-    min-height: 400px;
-    min-width: 32vw !important;
-    margin: auto;
+    /* min-height: 400px; */
+    /* min-width: 32vw !important; */
+    /* margin: auto; */
     background-color: var(--white);
-    margin-top: 15px
+    /* margin-top: 15px;
+    display: block;
+    box-sizing: border-box;
+    height: 450px;
+    width: 900px; */
+}
+
+.chart-container{
+    width: 900px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.list-container{
+    margin-top: 10px;
+    padding: 20px 20px 20px 30px;
+    border-radius: 10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+    ul{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 @media (max-width: 555px){
@@ -197,13 +218,13 @@ body{
     }
 }
 
-@media (max-width: 900px){
+/* @media (max-width: 900px){
     #graficoIngresso{
         min-height: 200px !important;
         min-width: 72vw !important;
 
     }
-} 
+}  */
 
 @media (max-width: 375px){
     #graficoIngresso, .description{
