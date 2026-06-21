@@ -7,7 +7,7 @@ const acceptBtn = document.querySelector('.consentButton')
 const rejectBtn = document.querySelector('.rejectButton')
 
 window.addEventListener('load', () => {
-    if(getPermission()){
+    if(document.cookie.includes('permissao')){
         setTheme()
         setFontSize()
     }else
@@ -16,7 +16,12 @@ window.addEventListener('load', () => {
 
 acceptBtn.addEventListener('click', () => {
     consentBox.classList.toggle('hide')
-    setCookie('permissao=true; age=86400; path=/')
+    document.cookie = 'permissao=true; age=86400; path=/'
+})
+
+rejectBtn.addEventListener('click', () => {
+    consentBox.classList.toggle('hide')
+    document.cookie = 'permissao=false; age=86400; path=/'
 })
 
 themeButton.addEventListener('click', () => {
@@ -26,14 +31,14 @@ themeButton.addEventListener('click', () => {
         setThemeIcon('dark-theme')
 
         console.log('Set page theme to dark-theme')
-        if(getPermission()) setCookie('tema=dark-theme; age=86400; path=/')
+        if(getPermission()) document.cookie = 'tema=dark-theme; age=86400; path=/'
     } else {
         document.body.classList.remove('dark-theme')
         document.body.classList.toggle('light-theme')
         setThemeIcon('light-theme')
 
         console.log('Set page theme to light-theme')
-        if(getPermission()) setCookie('tema=light-theme; age=86400; path=/')
+        if(getPermission()) document.cookie = 'tema=light-theme; age=86400; path=/'
     }
 })
 
@@ -73,7 +78,7 @@ increaseB.addEventListener('click', () => {
     }
 
     console.log(`Set font size to ${parseFloat(window.getComputedStyle(p[1]).fontSize)}px`)
-    if(getPermission()) setCookie(`fonte=${parseFloat(window.getComputedStyle(p[1]).fontSize)}; age=86400; path=/`)
+    if(getPermission()) document.cookie = `fonte=${parseFloat(window.getComputedStyle(p[1]).fontSize)}; age=86400; path=/`
     
 })
 
@@ -86,7 +91,7 @@ decreaseB.addEventListener('click', () => {
     }
 
     console.log(`Set font size to ${parseFloat(window.getComputedStyle(p[1]).fontSize)}px`)
-    if(getPermission()) setCookie(`fonte=${parseFloat(window.getComputedStyle(p[1]).fontSize)}; age=86400; path=/`)
+    if(getPermission()) document.cookie = `fonte=${parseFloat(window.getComputedStyle(p[1]).fontSize)}; age=86400; path=/`
 })
 
 function setFontSize() {
@@ -108,8 +113,7 @@ function setFontSize() {
 }
 
 function setCookie(data) {
-    if (navigator.cookieEnabled)
-        document.cookie = data
+    document.cookie = data
 }
 
 function getCookie(name){
