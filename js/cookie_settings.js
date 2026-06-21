@@ -7,11 +7,14 @@ const acceptBtn = document.querySelector('.consentButton')
 const rejectBtn = document.querySelector('.rejectButton')
 
 window.addEventListener('load', () => {
-    if(document.cookie.includes('permissao')){
+    if(!document.cookie.includes('permissao')){
+        consentBox.classList.remove('hide')
+    }
+    
+    if(getPermission()){
         setTheme()
         setFontSize()
-    }else
-        consentBox.classList.remove('hide')
+    }
 })
 
 acceptBtn.addEventListener('click', () => {
