@@ -143,14 +143,15 @@
 }
 
 .table-container{
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    overflow-x: auto;
 }
 
 .tabela-curricular{
     margin-top: 10px;
     border-collapse: collapse;
     width: 100%;
-    
+
     tr:nth-child(odd){
       background-color: var(--light-gray);  
     }
@@ -224,12 +225,12 @@
     }
 } 
 
-@media (max-width: 715px){
+/* @media (max-width: 715px){
     .tabela-curricular td, th{
         padding: 5px;
         font-size: 9px;
     }
-}
+} */
 
 @media (max-width: 650px){
     .footer-container p {

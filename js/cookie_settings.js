@@ -75,7 +75,7 @@ function setThemeIcon(icon) {
 increaseB.addEventListener('click', () => {
     const p = document.getElementsByTagName('p')
 
-    for (let i = 1; i < p.length - 1; i++) {
+    for (let i = 1; i < p.length - 2; i++) {
         let size = parseFloat(window.getComputedStyle(p[i]).fontSize)
         p[i].style.fontSize = `${size + 1.6}px`
     }
@@ -88,7 +88,7 @@ increaseB.addEventListener('click', () => {
 decreaseB.addEventListener('click', () => {
     const p = document.getElementsByTagName('p')
 
-    for (let i = 1; i < p.length - 1; i++) {
+    for (let i = 1; i < p.length - 2; i++) {
         let size = parseFloat(window.getComputedStyle(p[i]).fontSize)
         p[i].style.fontSize = `${size - 1.6}px`
     }
@@ -107,7 +107,7 @@ function setFontSize() {
                 console.log(`Font size defined to ${fontSize}px`)
 
                 const p = document.getElementsByTagName('p')
-                for (let i = 1; i < p.length - 1; i++)
+                for (let i = 1; i < p.length - 2; i++)
                     p[i].style.fontSize = `${fontSize}px`
             }
         }
