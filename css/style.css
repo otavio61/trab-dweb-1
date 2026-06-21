@@ -171,15 +171,7 @@
 }
 
 #graficoIngresso{
-    /* min-height: 400px; */
-    /* min-width: 32vw !important; */
-    /* margin: auto; */
     background-color: var(--white);
-    /* margin-top: 15px;
-    display: block;
-    box-sizing: border-box;
-    height: 450px;
-    width: 900px; */
 }
 
 .chart-container{
