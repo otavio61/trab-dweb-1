@@ -15,7 +15,7 @@
     }
 
     .tabela-curricular tr:nth-child(odd){
-        background-color: var(--dark-gray);  
+        background-color: var(--darker-gray);  
     }
 
     .tabela-curricular th{
@@ -237,14 +237,81 @@
     }
 }
 
+.consent-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+}
+
+#consentBox {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px var(--shadow-box);
+    text-align: center;
+}
+
+#consentBox.hide {
+    display: none;
+    pointer-events: none;
+    /* transform: scale(0.8);
+    transition: all 0.3s ease; */
+}
+
+#consentContent p {
+    color: var(--dark-gray);
+    margin: 10px 0 20px 0;
+}
+
+#consentContent .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.consentButton,
+.rejectButton {
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.consentButton {
+    background: var(--green);
+    margin-right: 10px;
+}
+
+.rejectButton {
+    color: var(--black);
+    background: transparent;
+    border: 2px solid var(--green);
+    text-decoration: none;
+}
+
+#consentHeader {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
 :root{
     --blue: rgb(2, 120, 210);
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
     --gray: rgb(221, 221, 221);
     --light-gray: rgb(242, 242, 242);
-    --dark-gray: rgb(43, 43, 43);
+    --dark-gray: rgb(133, 133, 133);
+    --darker-gray: rgb(43, 43, 43);
     --green: rgb(4, 170, 109);
     --dark-background: rgb(32, 32, 32);
     --dark-footer-header: rgb(17, 17, 17);
+    --shadow-box: rgba(0, 0, 0, 0.2);
 }
